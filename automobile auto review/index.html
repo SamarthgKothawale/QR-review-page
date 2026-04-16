@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prathmesh Automobiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      
+        body {
+        font-family: Arial;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        }
+
+        .app {
+            width: 100%;
+            max-width: 360px;
+            background: white;
+            border-radius: 25px;
+            margin: 40px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .stars {
+        color: #fbbc04;
+        font-size: 30px;
+        font-weight: bold;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            border-radius: 12px;
+            border: 3px solid #ccc;
+            padding: 10px;
+            font-size: 17px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .secondary {
+            background: #e0e0e0;
+        }
+        p{
+            font-family:'Times New Roman', Times, serif ;
+            font-weight:bolder;
+        }
+          h1{
+            text-align: center;
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+          }
+
+        .footer {
+            font-size: 12px;
+            color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body > 
+    
+    <h1>
+    🚗 Prathmesh Automobiles</h1>
+<div class="app">
+
+
+    <div class="header">
+        🚗 Prathmesh Automobiles
+    </div>
+
+    <div class="content">
+
+        <div class="stars">★ ★ ★ ★ ★</div>
+
+        <p>Give your REVIEW</p>
+
+        <textarea id="reviewText"></textarea>
+
+        <button class="primary" onclick="quickReview()">🚀 Submit Review</button>
+
+        <button class="secondary" onclick="generateReview()">🔄 Change Review</button>
+
+        <div class="footer">
+            Tap submit → Paste → Done ✅
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const reviews = [
+"Excellent service! My bike was repaired quickly and runs perfectly now.",
+"Very professional and honest mechanic. Highly recommended!",
+"Best automobile shop in the area. Quick service and fair pricing.",
+"Got my car serviced here, very satisfied with the quality of work.",
+"Friendly staff and great service. Will definitely visit again.",
+"Affordable rates and genuine spare parts used.",
+"Quick diagnosis and fast repair. Saved me a lot of time!",
+"Highly skilled mechanics and very cooperative staff.",
+"My car feels like new after the service. Great job!",
+"Reliable shop for all automobile needs.",
+"Very good experience. Work done neatly and on time.",
+"Best place for bike and car servicing. Totally satisfied.",
+"Transparent pricing and no hidden charges. Loved the service.",
+"Great support and fast response. Highly professional team.",
+"Excellent work quality and customer service.",
+"One of the most trusted automobile shops nearby.",
+"Good service at reasonable price. Worth visiting!",
+"Very knowledgeable staff. They explained everything clearly.",
+"Fast, reliable and affordable service.",
+"Highly recommended for both bike and car repairs."
+];
+
+function generateReview() {
+    let randomIndex = Math.floor(Math.random() * reviews.length);
+    document.getElementById("reviewText").value = reviews[randomIndex];
+}
+
+window.onload = generateReview;
+
+
+function quickReview() {
+
+    
+
+    let text = document.getElementById("reviewText");
+
+    text.select();
+    document.execCommand("copy");
+
+    alert("!! Now going to Google.!!");
+
+    window.open("https://g.page/r/Cdzv8HvS_Ei9ECk/review", "_blank");
+
+}
+</script>
+
+</body>
+</html>
+
